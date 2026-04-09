@@ -69,7 +69,7 @@ function storeData(key) {
     formItems.newNote = ["Enter Note on Project or Idea:", $("#detailTxt").val()];
     formItems.startDate = ["Enter Start Date:", $("#startDate").val()];
     formItems.status = ["Globalize:", $('[name="globalizationOptions"]:checked').val()];
-    localStorage.setItem(id, JSON.stringify(formItems));
+    sessionStorage.setItem(id, JSON.stringify(formItems));
     console.log(formItems);
     alert("Saving " + formItems.catType[1] + " " + id + "! Select Display Data Link Above To View Or Edit Data!");
 
