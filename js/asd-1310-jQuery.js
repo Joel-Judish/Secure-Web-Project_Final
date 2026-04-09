@@ -148,7 +148,7 @@ $('#viewIdeas').on('pageinit', function () {
             $(activityxml).find("Activity").each(function () {
                 var item = $(this);
                 var makeSubList = $("<li data-theme='a' data-role=''></li>");
-                var makeSubLi = $("<li>" + item.find('newID').text() + "</li>");
+                var makeSubLi = $("<li></li>").text(item.find('newID').text());
                 var makeLink = $("<a href='#'></a>");
 
                 makeLink.on('click', function () {
@@ -203,8 +203,23 @@ $('#viewCompleted').on('pageinit', function () {
 
 function generateActivityLink(activity) {
 
-    //create link to detail page
-    return '<li><a href="javascript:void(0)' + '" onclick="goToActivityDetailPage(\'' + activity.catType + '\',\'' + activity.newID + '\',\'' + activity.newNote + '\',\'' + activity.startDate + '\',\'' + activity.status + '\')">' + activity.newID + '</a></li>';
+    var li = $("<li></li>");
+    var a = $("<a href='#'></a>");
+
+    a.text(activity.newID); // SAFE
+
+    a.on("click", function () {
+        goToActivityDetailPage(
+            activity.catType,
+            activity.newID,
+            activity.newNote,
+            activity.startDate,
+            activity.status
+        );
+    });
+
+    li.append(a);
+    return li;
 }
 
 function goToActivityDetailPage(thinkTank, projectName, detailedNotes, initialize, globalize) {
