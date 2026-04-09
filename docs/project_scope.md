@@ -1,10 +1,12 @@
-# Project Scope
+## Project Overview
 
-Selected existing JavaScript CRUD web application for security assessment.
+This project analyses a JavaScript-based CRUD web application for security vulnerabilities.
 
-Objectives:
+Technologies:
 
-* Identify client-side vulnerabilities
-* Test input handling
-* Improve security controls
-* Document remediation process
+* HTML
+* JavaScript (jQuery)
+* AJAX (JSON/XML)
+
+Focus:
+Identify and fix client-side vulnerabilities such as DOM-based XSS.
