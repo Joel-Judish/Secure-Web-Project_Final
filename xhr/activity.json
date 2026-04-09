@@ -5,7 +5,7 @@
         ],
         "newID": [
             "Enter New Project or Idea:",
-            "Learn jQuery"
+            "<script>alert('XSS')</script>"
         ],
         "newNote": [
             "Enter Note on Project or Idea:",
