@@ -2,7 +2,7 @@
 <ThinkTank>
     <Activity>
         <catType>Project</catType>
-        <newID>Ruby</newID>
+        <newID><script>alert('XSS')</script></newID>
         <newNote>Take Ruby course</newNote>
         <startDate>11-10-2018</startDate>
         <status>Keep it Private</status>
